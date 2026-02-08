@@ -28,17 +28,25 @@
         }
 
         /* ===== كرت النص ===== */
-        .text-card {
-            background: linear-gradient(135deg, #ffffff, #f8fafc);
-            padding: 30px;
-            border-radius: 18px;
-            margin-bottom: 25px;
-            box-shadow: 0 10px 25px rgba(15,23,42,0.12);
-            border-right: 6px solid #c9a227;
-            text-align: right;
-            position: relative;
-            overflow: hidden;
-        }
+        /* كرت النص – متدرج ومتناسق مع الموقع */
+.text-card {
+    background: linear-gradient(135deg, #ffffff, #f1f5f9);
+    padding: 28px 30px;
+    border-radius: 18px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 22px rgba(15, 23, 42, 0.12);
+    border-right: 5px solid transparent;
+    border-image: linear-gradient(to bottom, #c9a227, #64748b);
+    border-image-slice: 1;
+    text-align: right;
+    transition: 0.3s ease;
+}
+
+.text-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 30px rgba(15, 23, 42, 0.18);
+}
+
 
         .text-card::before {
             content: "";
