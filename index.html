@@ -3,192 +3,225 @@
 <head>
   <meta charset="UTF-8">
 
-  <!-- التحكم في عرض الصفحة على الأجهزة المختلفة -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- العنوان -->
   <title>الرئيسية | شركة غوط البوصالي</title>
 
-  <!-- وصف الصفحة -->
-  <meta name="description" content="شركة غوط البوصالي تقدم خدمات استيراد وبيع الأجهزة الإلكترونية والكهربائية وقطع الغيار في ليبيا.">
+  <meta name="description" content="شركة غوط البوصالي متخصصة في استيراد الأثاث المنزلي والمكتبي بجودة عالية وتصاميم عصرية في ليبيا.">
 
-  <!-- الكلمات المفتاحية -->
-  <meta name="keywords" content="غوط البوصالي, إلكترونيات, أجهزة كهربائية, قطع غيار, استيراد, ليبيا, صيانة, بيع أجهزة">
+  <meta name="keywords" content="غوط البوصالي, أثاث, استيراد أثاث, أثاث منزلي, أثاث مكتبي, ليبيا">
 
-  <!-- اسم المؤلف -->
   <meta name="author" content="محمد">
 
-  <!-- أيقونة الموقع -->
   <link rel="icon" type="image/png" href="images/logo.png">
 
   <!-- Open Graph -->
   <meta property="og:title" content="شركة غوط البوصالي">
-  <meta property="og:description" content="شركة غوط البوصالي لاستيراد وبيع الأجهزة الإلكترونية والكهربائية وقطع الغيار في ليبيا.">
+  <meta property="og:description" content="شركة غوط البوصالي لاستيراد الأثاث المنزلي والمكتبي في ليبيا.">
   <meta property="og:image" content="images/logo.png">
   <meta property="og:url" content="https://mateamohammed019-cloud.github.io/Ghout-Al-Busali/">
   <meta property="og:type" content="website">
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="شركة غوط البوصالي">
-  <meta name="twitter:description" content="استيراد وبيع الأجهزة الإلكترونية والكهربائية وقطع الغيار.">
-  <meta name="twitter:image" content="images/logo.png">
-
   <link rel="stylesheet" href="style.css">
 
   <style>
-    /* نفس الستايل بدون تغيير */
+    /* ===== القسم الترحيبي ===== */
     .hero {
-      background: linear-gradient(135deg, #0078d7, #005fa3);
+      background: linear-gradient(135deg, #0f172a, #1e293b);
       color: white;
       text-align: center;
-      padding: 80px 20px;
-      border-radius: 0 0 30px 30px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      padding: 90px 20px;
+      border-radius: 0 0 35px 35px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 120px;
+      height: 4px;
+      background: #c9a227;
+      border-radius: 2px;
     }
 
     .hero img {
-      width: 90px;
-      height: 90px;
-      margin-bottom: 15px;
+      width: 95px;
+      height: 95px;
+      margin-bottom: 18px;
+      background: white;
+      border-radius: 50%;
+      padding: 6px;
     }
 
     .hero h1 {
-      font-size: 36px;
+      font-size: 38px;
       margin: 10px 0;
+      font-weight: bold;
+      letter-spacing: 1px;
     }
 
     .hero p {
-      font-size: 18px;
-      margin-bottom: 25px;
+      font-size: 19px;
+      margin-bottom: 30px;
+      color: #e5e7eb;
     }
 
     .hero button {
-      background: white;
-      color: #0078d7;
+      background: #c9a227;
+      color: #0f172a;
       border: none;
-      padding: 12px 25px;
+      padding: 14px 30px;
       font-size: 16px;
-      border-radius: 25px;
+      border-radius: 30px;
       cursor: pointer;
+      font-weight: bold;
       transition: 0.3s;
     }
 
     .hero button:hover {
-      background: #f5f5f5;
-      transform: scale(1.05);
+      background: #eab308;
+      transform: scale(1.07);
     }
 
+    /* ===== الخدمات ===== */
     .services {
       display: flex;
       justify-content: center;
-      gap: 25px;
+      gap: 30px;
       flex-wrap: wrap;
-      margin: 50px auto;
-      max-width: 1000px;
+      margin: 70px auto;
+      max-width: 1100px;
     }
 
     .service-card {
-      background: #fff;
-      border-radius: 16px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      padding: 25px;
-      width: 280px;
+      background: linear-gradient(180deg, #ffffff, #f8fafc);
+      border-radius: 20px;
+      box-shadow: 0 8px 22px rgba(15,23,42,0.12);
+      padding: 30px 25px;
+      width: 300px;
       text-align: center;
-      transition: 0.3s;
+      transition: 0.35s;
+      border-top: 4px solid #c9a227;
     }
 
     .service-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      transform: translateY(-10px);
+      box-shadow: 0 14px 32px rgba(15,23,42,0.2);
     }
 
     .service-card img {
-      width: 60px;
-      height: 60px;
-      margin-bottom: 15px;
+      width: 65px;
+      height: 65px;
+      margin-bottom: 18px;
     }
 
     .service-card h3 {
-      color: #0078d7;
-      margin-bottom: 10px;
+      color: #0f172a;
+      margin-bottom: 12px;
+      font-size: 22px;
     }
 
     .service-card p {
-      color: #333;
-      font-size: 15px;
+      color: #475569;
+      font-size: 16px;
+      line-height: 1.8;
     }
 
+    /* ===== بانر التواصل ===== */
     .contact-banner {
-      background: #0078d7;
+      background: linear-gradient(135deg, #1e293b, #0f172a);
       color: white;
       text-align: center;
-      padding: 30px 20px;
-      margin-top: 60px;
+      padding: 40px 20px;
+      margin-top: 80px;
+      border-top: 3px solid #c9a227;
+    }
+
+    .contact-banner h3 {
+      margin-bottom: 20px;
+      font-size: 22px;
     }
 
     .social-links a {
-      margin: 0 10px;
+      margin: 0 12px;
+      display: inline-block;
     }
 
     .social-links img {
-      width: 35px;
-      height: 35px;
+      width: 40px;
+      height: 40px;
       border-radius: 50%;
+      background: #0f172a;
+      padding: 6px;
       transition: 0.3s;
     }
 
     .social-links img:hover {
-      transform: scale(1.1);
+      background: #c9a227;
+      transform: scale(1.15);
+    }
+
+    .contact-banner p {
+      margin-top: 25px;
+      font-size: 14px;
+      color: #cbd5f5;
     }
   </style>
 </head>
 
 <body>
+
   <div id="navbar"></div>
   <div id="sidebar-container"></div>
 
   <div class="content">
 
-    <!-- القسم الترحيبي -->
+    <!-- الترحيب -->
     <section class="hero">
       <img src="images/logo.png" alt="شعار شركة غوط البوصالي">
       <h1>شركة غوط البوصالي</h1>
-      <p>لاستيراد الأجهزة الإلكترونية والكهربائية وقطع غيارها.</p>
+      <p>متخصصون في استيراد الأثاث المنزلي والمكتبي بجودة عالية وتصاميم عصرية.</p>
       <button onclick="window.location.href='pages/cotactus.html'">
-        تعرف أكثر
+        من نحن
       </button>
     </section>
 
     <!-- الخدمات -->
     <section class="services">
+
       <div class="service-card">
-        <img src="images/sale.svg" alt="بيع الأجهزة">
-        <h3>بيع الأجهزة</h3>
-        <p>نوفر أحدث الأجهزة الإلكترونية والكهربائية بجودة عالية وأسعار مناسبة.</p>
+        <img src="images/sale.svg" alt="استيراد الأثاث">
+        <h3>استيراد الأثاث</h3>
+        <p>نقوم باستيراد أحدث تشكيلات الأثاث المنزلي والمكتبي من أفضل المصانع العالمية.</p>
       </div>
 
       <div class="service-card">
-        <img src="images/repair.svg" alt="الصيانة">
-        <h3>الصيانة</h3>
-        <p>خدمات صيانة احترافية وسريعة بأيدي فنيين مختصين.</p>
+        <img src="images/repair.svg" alt="أثاث منزلي">
+        <h3>أثاث منزلي</h3>
+        <p>تشكيلة متنوعة من الأثاث المنزلي تجمع بين الراحة، الجودة، والتصميم العصري.</p>
       </div>
 
       <div class="service-card">
-        <img src="images/support.svg" alt="الدعم الفني">
-        <h3>الدعم الفني</h3>
-        <p>دعم فني مستمر للإجابة على استفساراتكم وتقديم الحلول.</p>
+        <img src="images/support.svg" alt="أثاث مكتبي">
+        <h3>أثاث مكتبي</h3>
+        <p>حلول أثاث مكتبي عملية وأنيقة تناسب الشركات والمكاتب الحديثة.</p>
       </div>
+
     </section>
 
     <!-- التواصل -->
     <section class="contact-banner">
       <h3>تواصل معنا عبر وسائل التواصل</h3>
+
       <div class="social-links">
         <a href="https://www.facebook.com/share/1BLNoTK9JK/" target="_blank">
           <img src="images/facebook.png" alt="Facebook">
         </a>
-        <a href="https://wa.me/+218941000668" target="_blank">
+        <a href="https://wa.me/218925588212" target="_blank">
           <img src="images/whatsapp.webp" alt="WhatsApp">
         </a>
         <a href="https://www.tiktok.com/@ahmed.gx0" target="_blank">
