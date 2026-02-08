@@ -10,50 +10,63 @@
 
     <style>
         .about-container {
-            background: #ffffff;
+            background: linear-gradient(180deg, #ffffff, #f8fafc);
             margin: 40px auto;
-            padding: 40px 30px;
-            border-radius: 18px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            max-width: 900px;
+            padding: 45px 35px;
+            border-radius: 22px;
+            box-shadow: 0 12px 30px rgba(15,23,42,0.15);
+            max-width: 950px;
             text-align: center;
+            border-top: 4px solid #c9a227;
         }
 
         .about-container h2 {
-            color: #1e293b;
-            margin-bottom: 20px;
-            font-size: 30px;
-        }
-
-        .about-container p {
-            color: #334155;
-            line-height: 1.9;
-            font-size: 18px;
+            color: #0f172a;
             margin-bottom: 30px;
+            font-size: 32px;
+            font-weight: bold;
         }
 
-        /* صناديق المعلومات */
+        /* كرت النص */
+        .text-card {
+            background: #ffffff;
+            padding: 28px 30px;
+            border-radius: 18px;
+            margin-bottom: 25px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.07);
+            border-right: 5px solid #c9a227;
+            text-align: right;
+        }
+
+        .text-card p {
+            color: #334155;
+            line-height: 2;
+            font-size: 18px;
+            margin: 0;
+        }
+
+        /* كروت المعلومات */
         .info-box, .contact-box {
-            background: #f8fafc;
+            background: linear-gradient(135deg, #f8fafc, #ffffff);
             padding: 30px;
-            border-radius: 16px;
+            border-radius: 18px;
             margin-top: 30px;
             border-right: 6px solid #c9a227;
-            box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+            box-shadow: 0 8px 22px rgba(15,23,42,0.12);
             text-align: right;
             transition: 0.3s ease;
         }
 
         .info-box:hover, .contact-box:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+            transform: translateY(-6px);
+            box-shadow: 0 14px 30px rgba(15,23,42,0.18);
         }
 
         .info-box h3, .contact-box h3 {
             color: #0f172a;
-            font-size: 22px;
+            font-size: 23px;
             margin-bottom: 18px;
-            border-bottom: 2px solid #e5e7eb;
+            border-bottom: 2px dashed #c9a227;
             padding-bottom: 10px;
         }
 
@@ -66,29 +79,39 @@
         .info-box li, .contact-box li {
             font-size: 18px;
             margin-bottom: 14px;
-            color: #334155;
+            color: #1e293b;
         }
 
         /* أيقونات التواصل */
         .social-icons {
-            margin-top: 35px;
+            margin-top: 40px;
             text-align: center;
+            padding-top: 25px;
+            border-top: 1px solid #e5e7eb;
         }
 
         .social-icons a {
-            display: inline-block;
-            margin: 0 12px;
-            transition: transform 0.3s;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 52px;
+            height: 52px;
+            margin: 0 10px;
+            background: #0f172a;
+            border-radius: 50%;
+            transition: 0.3s;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
         }
 
         .social-icons a:hover {
-            transform: scale(1.2);
+            background: #c9a227;
+            transform: scale(1.15);
         }
 
         .social-icons img {
-            width: 42px;
-            height: 42px;
-            border-radius: 50%;
+            width: 26px;
+            height: 26px;
+            filter: brightness(0) invert(1);
         }
     </style>
 </head>
@@ -103,19 +126,22 @@
 
         <h2>عن شركة غوط البوصالي</h2>
 
-        <p>
-            شركة <strong>غوط البوصالي</strong> هي شركة ليبية متخصصة في
-            <strong>استيراد الأثاث المنزلي والمكتبي</strong>،
-            نسعى لتوفير منتجات عالية الجودة تجمع بين
-            <strong>الأناقة، المتانة، والتصميم العصري</strong>،
-            لتلبية احتياجات الأفراد والشركات على حد سواء.
-        </p>
+        <div class="text-card">
+            <p>
+                شركة <strong>غوط البوصالي</strong> هي شركة ليبية متخصصة في
+                <strong>استيراد الأثاث المنزلي والمكتبي</strong>،
+                وتسعى إلى توفير منتجات عالية الجودة تجمع بين
+                <strong>الأناقة، المتانة، والتصميم العصري</strong>.
+            </p>
+        </div>
 
-        <p>
-            نعمل على اختيار أفضل المصانع والموردين لضمان تقديم
-            أثاث يواكب أحدث الاتجاهات العالمية،
-            مع الالتزام بالمصداقية وجودة الخدمة ورضا العملاء.
-        </p>
+        <div class="text-card">
+            <p>
+                نحرص على اختيار أفضل المصانع والموردين لضمان تقديم
+                أثاث يواكب أحدث الاتجاهات العالمية،
+                مع الالتزام بالمصداقية وجودة الخدمة ورضا العملاء.
+            </p>
+        </div>
 
         <!-- معلومات الشركة -->
         <div class="info-box">
@@ -127,13 +153,13 @@
             </ul>
         </div>
 
-        <!-- اتصل بنا -->
+        <!-- معلومات التواصل -->
         <div class="contact-box">
             <h3>معلومات التواصل</h3>
             <ul>
                 <li>📞 الهاتف: <strong>0925588212</strong></li>
                 <li>📧 البريد الإلكتروني: <strong>ghoutbusali@gmail.com</strong></li>
-                <li>📍 العنوان: البيضاء– ليبيا</li>
+                <li>📍 العنوان: البيضاء – ليبيا</li>
             </ul>
         </div>
 
@@ -143,7 +169,7 @@
                 <img src="../images/facebook.png" alt="Facebook">
             </a>
 
-            <a href="https://wa.me/+218 92-5588212" target="_blank">
+            <a href="https://wa.me/218925588212" target="_blank">
                 <img src="../images/whatsapp.webp" alt="Whatsapp">
             </a>
 
