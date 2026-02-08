@@ -10,11 +10,11 @@
 
     <style>
         .about-container {
-            background: linear-gradient(180deg, #ffffff, #f8fafc);
+            background: linear-gradient(180deg, #ffffff, #f1f5f9);
             margin: 40px auto;
             padding: 45px 35px;
             border-radius: 22px;
-            box-shadow: 0 12px 30px rgba(15,23,42,0.15);
+            box-shadow: 0 14px 35px rgba(15,23,42,0.18);
             max-width: 950px;
             text-align: center;
             border-top: 4px solid #c9a227;
@@ -22,20 +22,32 @@
 
         .about-container h2 {
             color: #0f172a;
-            margin-bottom: 30px;
+            margin-bottom: 35px;
             font-size: 32px;
             font-weight: bold;
         }
 
-        /* كرت النص */
+        /* ===== كرت النص ===== */
         .text-card {
-            background: #ffffff;
-            padding: 28px 30px;
+            background: linear-gradient(135deg, #ffffff, #f8fafc);
+            padding: 30px;
             border-radius: 18px;
             margin-bottom: 25px;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.07);
-            border-right: 5px solid #c9a227;
+            box-shadow: 0 10px 25px rgba(15,23,42,0.12);
+            border-right: 6px solid #c9a227;
             text-align: right;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .text-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #0f172a, #c9a227);
         }
 
         .text-card p {
@@ -45,28 +57,44 @@
             margin: 0;
         }
 
-        /* كروت المعلومات */
+        /* ===== كروت المعلومات ===== */
         .info-box, .contact-box {
-            background: linear-gradient(135deg, #f8fafc, #ffffff);
-            padding: 30px;
-            border-radius: 18px;
-            margin-top: 30px;
+            background: linear-gradient(135deg, #f8fafc, #e5e7eb);
+            padding: 32px;
+            border-radius: 20px;
+            margin-top: 35px;
             border-right: 6px solid #c9a227;
-            box-shadow: 0 8px 22px rgba(15,23,42,0.12);
+            box-shadow: 0 12px 28px rgba(15,23,42,0.15);
             text-align: right;
-            transition: 0.3s ease;
+            transition: 0.35s ease;
+            position: relative;
+        }
+
+        .info-box::before,
+        .contact-box::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 20px;
+            background: linear-gradient(
+                120deg,
+                rgba(201,162,39,0.08),
+                rgba(15,23,42,0.05),
+                rgba(201,162,39,0.08)
+            );
+            pointer-events: none;
         }
 
         .info-box:hover, .contact-box:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 14px 30px rgba(15,23,42,0.18);
+            transform: translateY(-8px);
+            box-shadow: 0 18px 40px rgba(15,23,42,0.22);
         }
 
         .info-box h3, .contact-box h3 {
             color: #0f172a;
             font-size: 23px;
             margin-bottom: 18px;
-            border-bottom: 2px dashed #c9a227;
+            border-bottom: 2px solid #c9a227;
             padding-bottom: 10px;
         }
 
@@ -80,38 +108,6 @@
             font-size: 18px;
             margin-bottom: 14px;
             color: #1e293b;
-        }
-
-        /* أيقونات التواصل */
-        .social-icons {
-            margin-top: 40px;
-            text-align: center;
-            padding-top: 25px;
-            border-top: 1px solid #e5e7eb;
-        }
-
-        .social-icons a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 52px;
-            height: 52px;
-            margin: 0 10px;
-            background: #0f172a;
-            border-radius: 50%;
-            transition: 0.3s;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-        }
-
-        .social-icons a:hover {
-            background: #c9a227;
-            transform: scale(1.15);
-        }
-
-        .social-icons img {
-            width: 26px;
-            height: 26px;
-            filter: brightness(0) invert(1);
         }
     </style>
 </head>
@@ -162,21 +158,6 @@
                 <li>📍 العنوان: البيضاء – ليبيا</li>
             </ul>
         </div>
-
-        <!-- التواصل الاجتماعي -->
-        <!-- <div class="social-icons">
-            <a href="https://www.facebook.com/share/1BLNoTK9JK/" target="_blank">
-                <img src="../images/facebook.png" alt="Facebook">
-            </a>
-
-            <a href="https://wa.me/218925588212" target="_blank">
-                <img src="../images/whatsapp.webp" alt="Whatsapp">
-            </a>
-
-            <a href="https://www.tiktok.com/@ahmed.gx0" target="_blank">
-                <img src="../images/tiktok.png" alt="Tiktok">
-            </a>
-        </div> -->
 
     </div>
 </div>
